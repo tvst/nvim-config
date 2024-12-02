@@ -8,20 +8,21 @@ vim.keymap.set(
   { noremap = true, silent = true, desc = "Resume" }
 )
 
+vim.keymap.set("n", "<S-h>", "gT", { desc = "Prev Tab" })
+vim.keymap.set("n", "<S-l>", "gt", { desc = "Next Tab" })
+
 vim.keymap.set("n", "<localleader>w", ":w<cr>", { noremap = true, silent = true, desc = "Write buffer" })
---vim.keymap.set("n", "<localleader>q", ":q<cr>", { noremap = true, silent = true, desc = "Close window" })
+vim.keymap.set("n", "<localleader>q", ":q<cr>", { noremap = true, silent = true, desc = "Close window" })
 
 -- vim.keymap.set('n', '\\q', ':q<cr>', { desc = '[Q]uit' })
 -- vim.keymap.set('n', '\\w', ':w<cr>', { desc = 'Close [W]indow' })
 -- vim.keymap.set('n', '\\t', ':tabe %<cr>', { desc = 'New [T]ab' })
 -- vim.keymap.set('n', '\\tt', ':tabe<cr>', { desc = 'New blank [Tt]ab' })
---
--- vim.keymap.set('n', '\\l', ':set cursorline!<cr>', { desc = 'Toggle [L]ine' })
---
--- -- Mappings for diffs
--- vim.keymap.set('n', '\\d', ':diffthis<cr>', { desc = '[D]iff file' })
--- vim.keymap.set('n', '\\du', ':diffupdate<cr>', { desc = '[D]iff [U]pdate' })
--- vim.keymap.set('n', '\\dd', ':diffoff<cr>', { desc = 'Stop [Dd]iff' })
+
+-- Mappings for diffs
+vim.keymap.set("n", "\\d", ":diffthis<cr>", { desc = "Diff File" })
+vim.keymap.set("n", "\\du", ":diffupdate<cr>", { desc = "Diff Update" })
+vim.keymap.set("n", "\\dd", ":diffoff<cr>", { desc = "Stop Diff" })
 
 -- Navigate the Treesitter tree with [; ]; [p and ]p
 
