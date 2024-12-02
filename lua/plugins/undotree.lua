@@ -1,15 +1,15 @@
 return {
   {
-    'jiaoshijie/undotree',
+    "jiaoshijie/undotree",
     dependencies = {
-      'nvim-lua/plenary.nvim',
+      "nvim-lua/plenary.nvim",
     },
     config = true,
     keys = {
       {
-        '<leader>u',
+        "<leader>cu",
         '<cmd>lua require("undotree").toggle()<cr>',
-        desc = '[U]ndolist',
+        desc = "Undo list",
         noremap = true,
         silent = true,
       },
