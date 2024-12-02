@@ -13,7 +13,10 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight-night",
+      colorscheme = function()
+        vim.cmd.colorscheme("neoneon")
+        vim.cmd.colorscheme("minichrome")
+      end,
     },
   },
 }
