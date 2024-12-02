@@ -20,7 +20,7 @@ vim.opt.colorcolumn = "+1" -- The column after textwidth.
 
 -- Show borders in diagnostic floats
 vim.diagnostic.config({
-  float = { border = "rounded" },
+	float = { border = "rounded" },
 })
 
 -- Use treesitter for folding.
