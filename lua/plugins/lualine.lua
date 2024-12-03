@@ -5,16 +5,16 @@ return {
       options = {
         section_separators = { left = "", right = "" },
         component_separators = { left = "", right = "" },
-      },
-      disabled_filetypes = {
-        statusline = {
-          "dashboard",
-          "alpha",
-          "ministarter",
-          "snacks_dashboard",
-          "packer",
-          "NVimTree",
-          "neo-tree",
+        disabled_filetypes = {
+          statusline = {
+            "dashboard",
+            "alpha",
+            "ministarter",
+            "snacks_dashboard",
+            "packer",
+            "NVimTree",
+            "neo-tree",
+          },
         },
       },
       sections = {
@@ -37,6 +37,13 @@ return {
           { "location", color = "StatusLineNC" },
           { "branch", color = "StatusLineNC" },
           { "mode", color = "StatusLineNC" },
+          function()
+            local reg = vim.fn.reg_recording()
+            if reg == "" then
+              return ""
+            end
+            return "Recording to " .. reg
+          end,
         },
       },
       inactive_sections = {
