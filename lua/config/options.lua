@@ -29,6 +29,9 @@ vim.opt.colorcolumn = "+1" -- The column after textwidth.
 -- Show status under every window.
 vim.opt.laststatus = 2
 
+-- Don't conceal Markdown code.
+vim.opt.conceallevel = 0
+
 -- Show borders in diagnostic floats
 vim.diagnostic.config({
   float = { border = "rounded" },
