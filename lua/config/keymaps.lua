@@ -14,6 +14,8 @@ vim.keymap.set("n", "<S-l>", "gt", { desc = "Next Tab" })
 vim.keymap.set("n", "<localleader>w", ":w<cr>", { noremap = true, silent = true, desc = "Write buffer" })
 vim.keymap.set("n", "<localleader>q", ":q<cr>", { noremap = true, silent = true, desc = "Close window" })
 
+vim.keymap.set("n", "-", ":Neotree current<cr>", { noremap = true, silent = true, desc = "Open explorer" })
+
 -- vim.keymap.set('n', '\\q', ':q<cr>', { desc = '[Q]uit' })
 -- vim.keymap.set('n', '\\w', ':w<cr>', { desc = 'Close [W]indow' })
 -- vim.keymap.set('n', '\\t', ':tabe %<cr>', { desc = 'New [T]ab' })
