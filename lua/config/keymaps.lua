@@ -110,6 +110,7 @@ local function get_parent_down(node)
 end
 
 vim.keymap.set("n", "[;", function()
+  vim.cmd("norm! $^")
   local node = vim.treesitter.get_node()
 
   if node == nil then
@@ -123,6 +124,7 @@ vim.keymap.set("n", "[;", function()
 end, { noremap = true, desc = "Goto previous sibling" })
 
 vim.keymap.set("n", "];", function()
+  vim.cmd("norm! $^")
   local node = vim.treesitter.get_node()
 
   if node == nil then
@@ -136,6 +138,7 @@ vim.keymap.set("n", "];", function()
 end, { noremap = true, desc = "Goto next sibling" })
 
 vim.keymap.set("n", "[p", function()
+  vim.cmd("norm! $^")
   local node = vim.treesitter.get_node()
 
   if node == nil then
@@ -149,6 +152,7 @@ vim.keymap.set("n", "[p", function()
 end, { noremap = true, desc = "Goto parent top" })
 
 vim.keymap.set("n", "]p", function()
+  vim.cmd("norm! $^")
   local node = vim.treesitter.get_node()
 
   if node == nil then
