@@ -40,6 +40,3 @@ vim.diagnostic.config({
 -- Use treesitter for folding.
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-
-vim.cmd.colorscheme("neoneon")
-vim.cmd.colorscheme("minichrome")

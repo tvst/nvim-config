@@ -1,4 +1,5 @@
 return {
+  -- Nice theme to have in the toolbelt.
   {
     "folke/tokyonight.nvim",
     opts = {
@@ -13,10 +14,9 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = function()
-        vim.cmd.colorscheme("neoneon")
-        vim.cmd.colorscheme("minichrome")
-      end,
+      -- My own theme!
+      -- colorscheme = "neoneon",
+      colorscheme = "neophile",
     },
   },
 }
