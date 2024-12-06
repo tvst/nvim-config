@@ -10,12 +10,6 @@ return {
       },
 
       {
-        "<leader>ggd",
-        "<cmd>:Gvdiffsplit<cr>",
-        desc = "Git file diff",
-      },
-
-      {
         "<leader>ggl",
         "<cmd>:Gclog!<cr>",
         desc = "Git repo log",
@@ -31,6 +25,12 @@ return {
         "<localleader>gb",
         "<cmd>:Git blame<cr>",
         desc = "Git blame",
+      },
+
+      {
+        "<localleader>gd",
+        "<cmd>:Gvdiffsplit<cr>",
+        desc = "Git file diff",
       },
 
       {
