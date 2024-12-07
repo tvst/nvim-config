@@ -40,3 +40,6 @@ vim.diagnostic.config({
 -- Use treesitter for folding.
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+-- Hide inline diagnostics by default.
+vim.diagnostic.config({ virtual_text = false })
