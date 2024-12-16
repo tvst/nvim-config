@@ -48,6 +48,9 @@ return {
       },
       inactive_sections = {
         lualine_a = {
+          { "diagnostics", color = "StatusLineNC" },
+        },
+        lualine_b = {
           {
             "filename",
             file_status = true,
@@ -55,7 +58,6 @@ return {
             color = "StatusLineNC",
           },
         },
-        lualine_b = {},
         lualine_c = {},
         lualine_x = {},
         lualine_y = {},
