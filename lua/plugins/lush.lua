@@ -1,4 +1,4 @@
-local linux_dir = "/homex/tvst/Projects/config/repos/neophile"
+local linux_dir = "/home/tvst/Projects/config/repos/neophile"
 local mac_dir = "/Users/tteixeira/Projects/config/repos/neophile"
 
 local dir_name = linux_dir
