@@ -16,6 +16,7 @@ return {
             "neo-tree",
           },
         },
+        always_divide_middle = false,
       },
       sections = {
         lualine_a = {
@@ -31,11 +32,12 @@ return {
         },
         lualine_c = {},
         lualine_x = {},
-        lualine_y = {},
-        lualine_z = {
+        lualine_y = {
           { "progress", color = "StatusLineNC" },
           { "location", color = "StatusLineNC" },
           { "branch", color = "StatusLineNC" },
+        },
+        lualine_z = {
           { "mode", color = "StatusLineNC" },
           function()
             local reg = vim.fn.reg_recording()
@@ -60,7 +62,11 @@ return {
         },
         lualine_c = {},
         lualine_x = {},
-        lualine_y = {},
+        lualine_y = {
+          { "progress", color = "StatusLineNC" },
+          { "location", color = "StatusLineNC" },
+          { "branch", color = "StatusLineNC" },
+        },
         lualine_z = {},
       },
     },
