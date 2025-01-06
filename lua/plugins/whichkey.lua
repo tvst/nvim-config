@@ -3,6 +3,5 @@ return { -- Useful plugin to show you pending keybinds.
   event = "VimEnter", -- Sets the loading event to 'VimEnter'
   opts = {
     sort = { "desc" },
-    preset = "modern",
   },
 }
