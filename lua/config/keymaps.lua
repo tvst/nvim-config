@@ -14,10 +14,10 @@ vim.keymap.set("n", "\\d", ":diffthis<cr>", { desc = "Diff File" })
 vim.keymap.set("n", "\\du", ":diffupdate<cr>", { desc = "Diff Update" })
 vim.keymap.set("n", "\\dd", ":diffoff<cr>", { desc = "Stop Diff" })
 
-local virual_text_active = false
+local virtual_text_active = true
 vim.keymap.set("n", "<leader>uD", function()
-  virual_text_active = not virual_text_active
-  if virual_text_active then
+  virtual_text_active = not virtual_text_active
+  if virtual_text_active then
     vim.diagnostic.config({ virtual_text = true })
   else
     vim.diagnostic.config({ virtual_text = false })
