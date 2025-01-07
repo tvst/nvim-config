@@ -14,7 +14,7 @@ vim.opt.fillchars = {
   foldsep = " ",
   diff = " ",
   eob = " ",
-  vert = "│", -- I can't decide between these: "·", "│", " "
+  vert = " ", -- I can't decide between these: "·", "│", " "
   stlnc = " ",
   stl = " ",
 }
