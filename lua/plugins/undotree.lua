@@ -5,13 +5,15 @@ return {
       "nvim-lua/plenary.nvim",
     },
     config = true,
+    lazy = true,
     keys = {
       {
-        "<leader>cu",
-        '<cmd>lua require("undotree").toggle()<cr>',
+        "<localleader>u",
+        function()
+          require("undotree").toggle()
+        end,
         desc = "Undo list",
         noremap = true,
-        silent = true,
       },
     },
     opts = {
