@@ -10,4 +10,5 @@ end
 return {
   "rktjmp/lush.nvim",
   { dir = dir_name, lazy = true },
+  cmd = "Lushify",
 }
