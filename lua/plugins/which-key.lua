@@ -5,6 +5,7 @@ return {
   opts_extend = { 'spec' },
   opts = {
     preset = 'helix',
+    delay = 0,
     defaults = {},
     sort = { "group", "manual" },
     icons = {
