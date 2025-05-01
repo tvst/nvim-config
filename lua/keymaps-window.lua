@@ -55,4 +55,5 @@ add({
   desc = "Open [S]earch and replace",
 })
 
+add({ "<leader>wn", function() Snacks.notifier.hide() end, desc = "Dismiss [N]otifications" })
 add({ "<leader>wz", function() Snacks.toggle.zoom() end, desc = "Toggle window [Z]oom" })
