@@ -1,3 +1,4 @@
+-- Used to build the Neophile theme.
 local linux_dir = "/home/tvst/Projects/config/repos/neophile"
 local mac_dir = "/Users/tteixeira/Projects/config/repos/neophile"
 
@@ -9,6 +10,10 @@ end
 
 return {
   "rktjmp/lush.nvim",
-  { dir = dir_name, lazy = true },
+  {
+    dir = dir_name,
+    lazy = true,
+  },
   cmd = "Lushify",
+  lazy = true,
 }
