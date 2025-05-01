@@ -4,7 +4,7 @@ return {
     "nvim-neotest/nvim-nio",
     "nvim-neotest/neotest-python",
     "nvim-treesitter/nvim-treesitter",
-    -- "nvim-neotest/jest", -- Asks for GH username/password???
+    -- "nvim-neotest/jest",
   },
   opts = {
     -- Can be a list of adapters like what neotest expects,
