@@ -1,7 +1,6 @@
 local add = require("which-key").add
 
-add({ "[b", "<cmd>bprevious<cr>", desc = "Prev Buffer" })
-add({ "]b", "<cmd>bnext<cr>", desc = "Next Buffer" })
+-- Quickfix nav
 
 add({
   "[q",
@@ -33,7 +32,7 @@ add({
   desc = "Next Quickfix item",
 })
 
--- diagnostic
+-- Diagnostic nav
 local diagnostic_goto = function(next, severity)
   local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
   severity = severity and vim.diagnostic.severity[severity] or nil
@@ -49,7 +48,39 @@ add({ "[e", diagnostic_goto(false, "ERROR"), desc = "Prev Error" })
 add({ "]w", diagnostic_goto(true, "WARN"), desc = "Next Warning" })
 add({ "[w", diagnostic_goto(false, "WARN"), desc = "Prev Warning" })
 
--- Navigate the Treesitter tree
+-- Buffer nav
+add({ "[b", "<cmd>bprevious<cr>", desc = "Prev Buffer" })
+add({ "]b", "<cmd>bnext<cr>", desc = "Next Buffer" })
+
+-- Git nav
+local gs = package.loaded.gitsigns
+
+add({
+  "]h",
+  function()
+    if vim.wo.diff then
+      vim.cmd.normal({ "]c", bang = true })
+    else
+      gs.nav_hunk("next")
+    end
+  end,
+  desc = "Next Hunk"
+})
+add({
+  "[h",
+  function()
+    if vim.wo.diff then
+      vim.cmd.normal({ "[c", bang = true })
+    else
+      gs.nav_hunk("prev")
+    end
+  end,
+  desc = "Prev Hunk"
+})
+add({ "]H", function() gs.nav_hunk("last") end, desc = "Last Hunk" })
+add({ "[H", function() gs.nav_hunk("first") end, desc = "First Hunk" })
+
+-- Treesitter tree nav
 
 local function jump_to(line, col)
   -- Add current position to jumplist so you can return with Ctrl-O
