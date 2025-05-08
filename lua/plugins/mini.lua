@@ -1,6 +1,6 @@
 return { -- Collection of various small independent plugins/modules
   "echasnovski/mini.nvim",
-  enabled = false,
+  enabled = true,
   config = function()
     -- Better Around/Inside textobjects
     --
@@ -10,22 +10,6 @@ return { -- Collection of various small independent plugins/modules
     --  - ci'  - [C]hange [I]nside [']quote
     require("mini.ai").setup({
       n_lines = 500,
-      custom_textobjects = {
-        o = require("mini.ai").gen_spec.treesitter({ -- code block
-          a = { "@block.outer", "@conditional.outer", "@loop.outer" },
-          i = { "@block.inner", "@conditional.inner", "@loop.inner" },
-        }),
-        f = require("mini.ai").gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }), -- function
-        c = require("mini.ai").gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }),       -- class
-        t = { "<([%p%w]-)%f[^<%w][^<>]->.-</%1>", "^<.->().*()</[^/]->$" },                           -- tags
-        d = { "%f[%d]%d+" },                                                                          -- digits
-        e = {                                                                                         -- Word with case
-          { "%u[%l%d]+%f[^%l%d]", "%f[%S][%l%d]+%f[^%l%d]", "%f[%P][%l%d]+%f[^%l%d]", "^[%l%d]+%f[^%l%d]" },
-          "^().*()$",
-        },
-        u = require("mini.ai").gen_spec.function_call(),                           -- u for "Usage"
-        U = require("mini.ai").gen_spec.function_call({ name_pattern = "[%w_]" }), -- without dot in function name
-      },
     })
 
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
@@ -48,7 +32,7 @@ return { -- Collection of various small independent plugins/modules
       },
     })
 
-    -- Navigate blocks using [ ]
+    -- Navigate using [ ]
     require("mini.bracketed").setup({
       buffer = { suffix = "b", options = {} },
       comment = { suffix = "/", options = {} }, -- ]c is for diffs
@@ -62,20 +46,5 @@ return { -- Collection of various small independent plugins/modules
       undo = { suffix = "u", options = {} },
       yank = { suffix = "y", options = {} },
     })
-
-    -- -- Simple and easy statusline.
-    -- --  You could remove this setup call if you don't like it,
-    -- --  and try some other statusline plugin
-    -- local statusline = require("mini.statusline")
-    -- set use_icons to true if you have a Nerd Font
-    -- statusline.setup({ use_icons = vim.g.have_nerd_font })
-
-    -- -- You can configure sections in the statusline by overriding their
-    -- -- default behavior. For example, here we set the section for
-    -- -- cursor location to LINE:COLUMN
-    -- ---@diagnostic disable-next-line: duplicate-set-field
-    -- statusline.section_location = function()
-    --   return "%2l:%-2v"
-    -- end
   end,
 }
