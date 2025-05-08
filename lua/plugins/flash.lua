@@ -9,11 +9,11 @@ return {
   opts = {
     modes = {
       char = {
-        enabled = true,
-        -- hide after jump when not using jump labels
-        autohide = false,
-        -- show jump labels
-        jump_labels = true,
+        enabled = false,
+        -- -- hide after jump when not using jump labels
+        -- autohide = false,
+        -- -- show jump labels
+        -- jump_labels = true,
       },
       -- options used for treesitter selections
       -- `require("flash").treesitter()`
