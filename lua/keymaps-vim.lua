@@ -16,3 +16,5 @@ add({
   end,
   desc = "Inspect [T]reesitter node"
 })
+add({ "<leader>vp", "<cmd>:Lazy<cr>", desc = "Open [P]ackage manager (Lazy.nvim)" })
+add({ "<leader>vd", "<cmd>:Mason<cr>", desc = "Open [D]ependency manager (Mason)" })

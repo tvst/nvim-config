@@ -17,6 +17,7 @@ return {
     notifier = {
       top_down = false, -- place notifications from top to bottom
     },
+    lazygit = {},
     picker = {},
     quickfile = {},
     rename = {},
