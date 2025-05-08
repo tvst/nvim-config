@@ -55,5 +55,6 @@ add({
   desc = "Open [S]earch and replace",
 })
 
-add({ "<leader>wn", function() Snacks.notifier.hide() end, desc = "Dismiss [N]otifications" })
-add({ "<leader>wz", function() Snacks.toggle.zoom() end, desc = "Toggle window [Z]oom" })
+add({ "<leader>wn", function() Snacks.notifier.show_history() end, desc = "Open [N]otification history" })
+add({ "<leader>ww", function() Snacks.notifier.hide() end, desc = "Dismiss Notifications" })
+require("snacks").toggle.zoom():map("<leader>wz")
