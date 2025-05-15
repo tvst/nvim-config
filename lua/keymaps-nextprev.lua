@@ -219,7 +219,7 @@ add({
       jump_to(line, col)
     end,
     noremap = true,
-    desc = "Goto [P]arent top",
+    desc = "Goto parent top",
   },
   {
     "]p",
@@ -237,6 +237,6 @@ add({
       jump_to(line, col)
     end,
     noremap = true,
-    desc = "Goto [P]arent bottom"
+    desc = "Goto parent bottom"
   }
 })
