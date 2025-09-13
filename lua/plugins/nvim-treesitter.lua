@@ -1,3 +1,4 @@
+-- Treesitter configuration
 return {
   {
     "folke/which-key.nvim",

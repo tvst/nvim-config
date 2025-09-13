@@ -1,3 +1,4 @@
+-- Pretty popups for command bar, messages, etc.
 return {
   { "MunifTanjim/nui.nvim", lazy = true },
   {

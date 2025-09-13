@@ -1,3 +1,4 @@
+-- Diff for directories.
 return {
   "will133/vim-dirdiff",
   cmd = "DirDiff",

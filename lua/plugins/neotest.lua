@@ -1,3 +1,4 @@
+-- Run tests from vim.
 return {
   "nvim-neotest/neotest",
   dependencies = {

@@ -1,3 +1,4 @@
+-- Language Server
 return {
   {
     -- Main LSP Configuration

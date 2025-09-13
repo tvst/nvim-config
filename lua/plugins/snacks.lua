@@ -1,3 +1,5 @@
+-- Lots of small utilities.
+
 -- Terminal Mappings
 local function term_nav(dir)
   ---@param self snacks.terminal

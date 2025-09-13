@@ -1,3 +1,4 @@
+-- Tree interface for navigating undos.
 return {
   {
     "jiaoshijie/undotree",

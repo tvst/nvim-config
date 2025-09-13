@@ -1,6 +1,5 @@
+-- Draw matching parentheses and such.
 return {
-  -- autopairs
-  -- https://github.com/windwp/nvim-autopairs
   'windwp/nvim-autopairs',
   event = 'InsertEnter',
   opts = {},

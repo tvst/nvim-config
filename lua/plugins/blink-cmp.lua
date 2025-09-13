@@ -1,3 +1,4 @@
+-- Fast autocomplete.
 return {
   "saghen/blink.cmp",
   event = 'VimEnter',

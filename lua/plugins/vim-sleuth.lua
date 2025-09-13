@@ -1,4 +1,4 @@
+-- Sets up tab configuration, etc, from modelines and editorconfig.
 return {
-  -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 }

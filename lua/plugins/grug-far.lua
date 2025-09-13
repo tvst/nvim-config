@@ -1,4 +1,4 @@
--- search/replace in multiple files
+-- Search/replace in multiple files
 return {
   "MagicDuck/grug-far.nvim",
   opts = { headerMaxWidth = 80 },
