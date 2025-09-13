@@ -2,7 +2,7 @@
 return {
   {
     "tpope/vim-fugitive",
-    lazy = true,
+    lazy = false,
     cmd = "Git",
   },
 }
