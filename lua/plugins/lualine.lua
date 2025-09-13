@@ -36,7 +36,7 @@ return {
         lualine_y = {
           { "progress", color = "StatusLineNC" },
           { "location", color = "StatusLineNC" },
-          { "branch", color = "StatusLineNC" },
+          { "branch",   color = "StatusLineNC" },
         },
         lualine_z = {
           { "mode", color = "StatusLineNC" },
@@ -66,7 +66,7 @@ return {
         lualine_y = {
           { "progress", color = "StatusLineNC" },
           { "location", color = "StatusLineNC" },
-          { "branch", color = "StatusLineNC" },
+          { "branch",   color = "StatusLineNC" },
         },
         lualine_z = {},
       },
